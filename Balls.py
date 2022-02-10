@@ -26,7 +26,7 @@ screen.blit(background, (0, 0))
 
 objects = []
 
-# Create multiple objects wiuth different starting points and speeds
+# Create multiple objects with different starting points and speeds
 for x in range(4):
     o = GameObject(ball, x*120, [(x+1)*30, (x+1)*30])
     objects.append(o)
