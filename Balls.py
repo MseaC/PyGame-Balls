@@ -18,7 +18,7 @@ class GameObject:
 
 
 ball = pygame.image.load("intro_ball.gif")
-screen = pygame.display.set_mode([1280, 720])
+screen = pygame.display.set_mode([1920, 1080])
 background = pygame.Surface(screen.get_size())
 background = background.convert()
 background.fill((0, 0, 0))
@@ -43,10 +43,12 @@ while 1:
     for o in objects:
         o.move()
         # Change ball direction if reaches edge of screen
-        if o.pos.left < 0 or o.pos.right > 1280:
+        if o.pos.left < 0 or o.pos.right > 1920:
             o.speed[0] = -o.speed[0]
-        if o.pos.top < 0 or o.pos.bottom > 720:
+        if o.pos.top < 0 or o.pos.bottom > 1080:
             o.speed[1] = -o.speed[1]
         screen.blit(o.image, o.pos)
     pygame.display.update()
     pygame.time.delay(60)
+
+# Testing git through PyCharm
